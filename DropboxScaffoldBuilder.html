@@ -254,6 +254,28 @@ every execution of the test suite.</p>
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#build_delete-instance_method" title="#build_delete (instance method)">#<strong>build_delete</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#build_get_metadata-instance_method" title="#build_get_metadata (instance method)">#<strong>build_get_metadata</strong>  &#x21d2; Object </a>
     
 
@@ -664,9 +686,9 @@ every execution of the test suite.</p>
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="build_get_metadata-instance_method">
+  <h3 class="signature " id="build_delete-instance_method">
   
-    #<strong>build_get_metadata</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>build_delete</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -690,6 +712,47 @@ every execution of the test suite.</p>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'spec/support/dropbox_scaffold_builder.rb', line 61</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_build_delete'>build_delete</span>
+  <span class='id identifier rubyid_file_contents'>file_contents</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Tijuana, amigo.</span><span class='tstring_end'>&quot;</span></span>
+
+  <span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_upload'>upload</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_path_prefix'>path_prefix</span><span class='embexpr_end'>}</span><span class='tstring_content'>/will_be_deleted.txt</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_file_contents'>file_contents</span>
+  <span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_upload'>upload</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_path_prefix'>path_prefix</span><span class='embexpr_end'>}</span><span class='tstring_content'>/wont_be_deleted.txt</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_file_contents'>file_contents</span>
+  <span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_upload'>upload</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_path_prefix'>path_prefix</span><span class='embexpr_end'>}</span><span class='tstring_content'>/folder/a.txt</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_file_contents'>file_contents</span>
+  <span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_upload'>upload</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_path_prefix'>path_prefix</span><span class='embexpr_end'>}</span><span class='tstring_content'>/folder/b.txt</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_file_contents'>file_contents</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="build_get_metadata-instance_method">
+  
+    #<strong>build_get_metadata</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3>
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+70
+71
+72
+73
+74
+75
+76
+77</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'spec/support/dropbox_scaffold_builder.rb', line 70</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_build_get_metadata'>build_get_metadata</span>
   <span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_upload'>upload</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_path_prefix'>path_prefix</span><span class='embexpr_end'>}</span><span class='tstring_content'>/file.txt</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>This is a test file.</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='lbrace'>{</span>
@@ -720,13 +783,13 @@ every execution of the test suite.</p>
       <pre class="lines">
 
 
-84
-85
-86
-87</pre>
+93
+94
+95
+96</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'spec/support/dropbox_scaffold_builder.rb', line 84</span>
+      <pre class="code"><span class="info file"># File 'spec/support/dropbox_scaffold_builder.rb', line 93</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_build_get_thumbnail_batch'>build_get_thumbnail_batch</span>
   <span class='id identifier rubyid_file_content'>file_content</span> <span class='op'>=</span> <span class='const'>IO</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_fixtures_path'>fixtures_path</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>img.png</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -753,14 +816,14 @@ every execution of the test suite.</p>
       <pre class="lines">
 
 
-70
-71
-72
-73
-74</pre>
+79
+80
+81
+82
+83</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'spec/support/dropbox_scaffold_builder.rb', line 70</span>
+      <pre class="code"><span class="info file"># File 'spec/support/dropbox_scaffold_builder.rb', line 79</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_build_list_folder'>build_list_folder</span>
   <span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_create_folder'>create_folder</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_path_prefix'>path_prefix</span><span class='embexpr_end'>}</span><span class='tstring_content'>/shared_folder</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -788,12 +851,12 @@ every execution of the test suite.</p>
       <pre class="lines">
 
 
-76
-77
-78</pre>
+85
+86
+87</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'spec/support/dropbox_scaffold_builder.rb', line 76</span>
+      <pre class="code"><span class="info file"># File 'spec/support/dropbox_scaffold_builder.rb', line 85</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_build_upload'>build_upload</span>
   <span class='comment'># No need to set up anything
@@ -819,12 +882,12 @@ every execution of the test suite.</p>
       <pre class="lines">
 
 
-80
-81
-82</pre>
+89
+90
+91</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'spec/support/dropbox_scaffold_builder.rb', line 80</span>
+      <pre class="code"><span class="info file"># File 'spec/support/dropbox_scaffold_builder.rb', line 89</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_build_upload_by_chunks'>build_upload_by_chunks</span>
   <span class='comment'># No op
@@ -957,12 +1020,12 @@ every execution of the test suite.</p>
       <pre class="lines">
 
 
-90
-91
-92</pre>
+99
+100
+101</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'spec/support/dropbox_scaffold_builder.rb', line 90</span>
+      <pre class="code"><span class="info file"># File 'spec/support/dropbox_scaffold_builder.rb', line 99</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_path_prefix'>path_prefix</span>
   <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span> <span class='const'><span class='object_link'><a href="#PREFIX-constant" title="DropboxScaffoldBuilder::PREFIX (constant)">PREFIX</a></span></span><span class='comma'>,</span> <span class='ivar'>@endpoint_name</span>
@@ -977,7 +1040,7 @@ every execution of the test suite.</p>
 </div>
 
       <div id="footer">
-  Generated on Fri Jun 22 17:38:45 2018 by
+  Generated on Sat Jul 14 12:36:22 2018 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.9 (ruby-2.3.3).
 </div>

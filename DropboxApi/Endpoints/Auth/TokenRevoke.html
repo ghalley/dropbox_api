@@ -4,7 +4,7 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
-  Class: DropboxApi::Endpoints::Users::GetAccountBatch
+  Class: DropboxApi::Endpoints::Auth::TokenRevoke
   
     &mdash; Documentation by YARD 0.9.9
   
@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="../../../css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  pathId = "DropboxApi::Endpoints::Users::GetAccountBatch";
+  pathId = "DropboxApi::Endpoints::Auth::TokenRevoke";
   relpath = '../../../';
 </script>
 
@@ -36,10 +36,10 @@
       <div id="header">
         <div id="menu">
   
-    <a href="../../../_index.html">Index (G)</a> &raquo;
-    <span class='title'><span class='object_link'><a href="../../../DropboxApi.html" title="DropboxApi (module)">DropboxApi</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../Endpoints.html" title="DropboxApi::Endpoints (module)">Endpoints</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Users.html" title="DropboxApi::Endpoints::Users (module)">Users</a></span></span>
+    <a href="../../../_index.html">Index (T)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../../DropboxApi.html" title="DropboxApi (module)">DropboxApi</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../Endpoints.html" title="DropboxApi::Endpoints (module)">Endpoints</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Auth.html" title="DropboxApi::Endpoints::Auth (module)">Auth</a></span></span>
      &raquo; 
-    <span class="title">GetAccountBatch</span>
+    <span class="title">TokenRevoke</span>
   
 </div>
 
@@ -59,7 +59,7 @@
         <div class="clear"></div>
       </div>
 
-      <div id="content"><h1>Class: DropboxApi::Endpoints::Users::GetAccountBatch
+      <div id="content"><h1>Class: DropboxApi::Endpoints::Auth::TokenRevoke
   
   
   
@@ -78,7 +78,7 @@
           
             <li class="next"><span class='object_link'><a href="../Rpc.html" title="DropboxApi::Endpoints::Rpc (class)">Rpc</a></span></li>
           
-            <li class="next">DropboxApi::Endpoints::Users::GetAccountBatch</li>
+            <li class="next">DropboxApi::Endpoints::Auth::TokenRevoke</li>
           
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
@@ -98,7 +98,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>lib/dropbox_api/endpoints/users/get_account_batch.rb</dd>
+    <dd>lib/dropbox_api/endpoints/auth/token_revoke.rb</dd>
   </dl>
   
 </div>
@@ -115,17 +115,17 @@
       <dt id="Path-constant" class="">Path =
         
       </dt>
-      <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/2/users/get_account_batch</span><span class='tstring_end'>&quot;</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/2/auth/token/revoke</span><span class='tstring_end'>&quot;</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
     
       <dt id="ResultType-constant" class="">ResultType =
         
       </dt>
-      <dd><pre class="code"><span class='const'><span class='object_link'><a href="../../../DropboxApi.html" title="DropboxApi (module)">DropboxApi</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Results.html" title="DropboxApi::Results (module)">Results</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Results/BasicAccountBatch.html" title="DropboxApi::Results::BasicAccountBatch (class)">BasicAccountBatch</a></span></span></pre></dd>
+      <dd><pre class="code"><span class='const'><span class='object_link'><a href="../../../DropboxApi.html" title="DropboxApi (module)">DropboxApi</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Results.html" title="DropboxApi::Results (module)">Results</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Results/VoidResult.html" title="DropboxApi::Results::VoidResult (class)">VoidResult</a></span></span></pre></dd>
     
       <dt id="ErrorType-constant" class="">ErrorType =
         
       </dt>
-      <dd><pre class="code"><span class='const'><span class='object_link'><a href="../../../DropboxApi.html" title="DropboxApi (module)">DropboxApi</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Errors.html" title="DropboxApi::Errors (module)">Errors</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Errors/GetAccountError.html" title="DropboxApi::Errors::GetAccountError (class)">GetAccountError</a></span></span></pre></dd>
+      <dd><pre class="code"><span class='kw'>nil</span></pre></dd>
     
   </dl>
 
@@ -146,7 +146,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_account_batch-instance_method" title="#get_account_batch (instance method)">#<strong>get_account_batch</strong>(account_ids)  &#x21d2; Array&lt;BasicAccount&gt; </a>
+      <a href="#token_revoke-instance_method" title="#token_revoke (instance method)">#<strong>token_revoke</strong>  &#x21d2; Object </a>
     
 
     
@@ -160,7 +160,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Get information about multiple user accounts.</p>
+    <span class="summary_desc"><div class='inline'><p>Revoke the access token for the current account.</p>
 </div></span>
   
 </li>
@@ -204,9 +204,9 @@
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="get_account_batch-instance_method">
+  <h3 class="signature first" id="token_revoke-instance_method">
   
-    #<strong>get_account_batch</strong>(account_ids)  &#x21d2; <tt>Array&lt;BasicAccount&gt;</tt> 
+    #<strong>token_revoke</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -214,51 +214,13 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Get information about multiple user accounts. At most 300 accounts may
-be queried per request.</p>
+    <p>Revoke the access token for the current account</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <p class="tag_title">Parameters:</p>
-<ul class="param">
   
-    <li>
-      
-        <span class='name'>account_ids</span>
-      
-      
-        <span class='type'>(<tt>Array&lt;String&gt;</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>List of user account identifiers. Should not
-contain any duplicate account IDs.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Array&lt;BasicAccount&gt;</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>Basic information about any account.</p>
-</div>
-      
-    </li>
-  
-</ul>
 
 </div>
 <table class="source_code">
@@ -267,15 +229,15 @@ contain any duplicate account IDs.</p>
       <pre class="lines">
 
 
-14
-15
-16</pre>
+10
+11
+12</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/dropbox_api/endpoints/users/get_account_batch.rb', line 14</span>
+      <pre class="code"><span class="info file"># File 'lib/dropbox_api/endpoints/auth/token_revoke.rb', line 10</span>
 
-<span class='id identifier rubyid_add_endpoint'>add_endpoint</span> <span class='symbol'>:get_account_batch</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_account_ids'>account_ids</span><span class='op'>|</span>
-  <span class='id identifier rubyid_perform_request'>perform_request</span> <span class='symbol'>:account_ids</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_account_ids'>account_ids</span>
+<span class='id identifier rubyid_add_endpoint'>add_endpoint</span> <span class='symbol'>:token_revoke</span> <span class='kw'>do</span>
+  <span class='id identifier rubyid_perform_request'>perform_request</span><span class='lparen'>(</span><span class='kw'>nil</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -287,7 +249,7 @@ contain any duplicate account IDs.</p>
 </div>
 
       <div id="footer">
-  Generated on Sat Jul 14 12:36:21 2018 by
+  Generated on Sat Jul 14 12:36:20 2018 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.9 (ruby-2.3.3).
 </div>

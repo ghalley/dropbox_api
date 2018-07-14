@@ -261,6 +261,55 @@
     
     
     
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">recursive</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>If <code>true</code>, the list folder operation
+will be applied recursively to all subfolders and the response will
+contain contents of all subfolders. The default for this field is
+<code>false</code>.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">include_media_info</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>If <code>true</code>, media_info
+is set for photo and video. The default for this field is <code>false</code>.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">include_deleted</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>If <code>true</code>,
+<span class='object_link'><a href="../../Metadata/Deleted.html" title="DropboxApi::Metadata::Deleted (class)">Metadata::Deleted</a></span> will be
+returned for deleted file or folder, otherwise
+<span class='object_link'><a href="../../Errors/NotFoundError.html" title="DropboxApi::Errors::NotFoundError (class)">DropboxApi::Errors::NotFoundError</a></span>
+will be raised. The default for this field is <code>false</code>.</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
 
 
 </div>
@@ -270,9 +319,6 @@
       <pre class="lines">
 
 
-21
-22
-23
 24
 25
 26
@@ -286,10 +332,13 @@
 34
 35
 36
-37</pre>
+37
+38
+39
+40</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/dropbox_api/endpoints/files/list_folder.rb', line 21</span>
+      <pre class="code"><span class="info file"># File 'lib/dropbox_api/endpoints/files/list_folder.rb', line 24</span>
 
 <span class='id identifier rubyid_add_endpoint'>add_endpoint</span> <span class='symbol'>:list_folder</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='op'>|</span>
   <span class='id identifier rubyid_validate_options'>validate_options</span><span class='lparen'>(</span><span class='lbracket'>[</span>
@@ -318,7 +367,7 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Jun 22 17:38:42 2018 by
+  Generated on Sat Jul 14 12:36:20 2018 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.9 (ruby-2.3.3).
 </div>
