@@ -6,7 +6,7 @@
 <title>
   File: API Implementation Coverage
   
-    &mdash; Documentation by YARD 0.9.9
+    &mdash; Documentation by YARD 0.9.15
   
 </title>
 
@@ -57,9 +57,7 @@
         <div class="clear"></div>
       </div>
 
-      <div id="content"><div id='filecontents'><p><strong>IMPORTANT: This document is work in progress. Information isn&#39;t accurate.</strong></p>
-
-<p>The Dropbox API changes frequently, so you may find out that the feature that
+      <div id="content"><div id='filecontents'><p>The Dropbox API changes frequently, so you may find out that the feature that
 you need is missing. This document indicates what endpoints have been
 implemented.</p>
 
@@ -67,7 +65,87 @@ implemented.</p>
 of the endpoint has been implemented but some options may be missing. Guess
 what new moon means.</p>
 
-<h2>Files namespace</h2>
+<h2>File properties</h2>
+
+<table><thead>
+<tr>
+<th>API call</th>
+<th style="text-align: center">Status</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>/properties/add</code></td>
+<td style="text-align: center">🌑</td>
+</tr>
+<tr>
+<td><code>/properties/overwrite</code></td>
+<td style="text-align: center">🌑</td>
+</tr>
+<tr>
+<td><code>/properties/remove</code></td>
+<td style="text-align: center">🌑</td>
+</tr>
+<tr>
+<td><code>/properties/search</code></td>
+<td style="text-align: center">🌑</td>
+</tr>
+<tr>
+<td><code>/properties/search/continue</code></td>
+<td style="text-align: center">🌑</td>
+</tr>
+<tr>
+<td><code>/properties/update</code></td>
+<td style="text-align: center">🌑</td>
+</tr>
+<tr>
+<td><code>/templates/add_for_user</code></td>
+<td style="text-align: center">🌑</td>
+</tr>
+<tr>
+<td><code>/templates/get_for_user</code></td>
+<td style="text-align: center">🌑</td>
+</tr>
+<tr>
+<td><code>/templates/list_for_user</code></td>
+<td style="text-align: center">🌑</td>
+</tr>
+<tr>
+<td><code>/templates/remove_for_user</code></td>
+<td style="text-align: center">🌑</td>
+</tr>
+<tr>
+<td><code>/templates/update_for_user</code></td>
+<td style="text-align: center">🌑</td>
+</tr>
+</tbody></table>
+
+<h2>File requests</h2>
+
+<table><thead>
+<tr>
+<th>API call</th>
+<th style="text-align: center">Status</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>/create</code></td>
+<td style="text-align: center">🌕</td>
+</tr>
+<tr>
+<td><code>/get</code></td>
+<td style="text-align: center">🌑</td>
+</tr>
+<tr>
+<td><code>/list</code></td>
+<td style="text-align: center">🌑</td>
+</tr>
+<tr>
+<td><code>/update</code></td>
+<td style="text-align: center">🌑</td>
+</tr>
+</tbody></table>
+
+<h2>Files</h2>
 
 <table><thead>
 <tr>
@@ -78,6 +156,14 @@ what new moon means.</p>
 <tr>
 <td><code>/copy</code></td>
 <td style="text-align: center">🌕</td>
+</tr>
+<tr>
+<td><code>/copy_batch</code></td>
+<td style="text-align: center">🌑</td>
+</tr>
+<tr>
+<td><code>/copy_batch/check</code></td>
+<td style="text-align: center">🌑</td>
 </tr>
 <tr>
 <td><code>/copy_reference/get</code></td>
@@ -92,12 +178,32 @@ what new moon means.</p>
 <td style="text-align: center">🌕</td>
 </tr>
 <tr>
+<td><code>/create_folder_batch</code></td>
+<td style="text-align: center">🌑</td>
+</tr>
+<tr>
+<td><code>/create_folder_batch/check</code></td>
+<td style="text-align: center">🌑</td>
+</tr>
+<tr>
 <td><code>/delete</code></td>
 <td style="text-align: center">🌕</td>
 </tr>
 <tr>
+<td><code>/delete_batch</code></td>
+<td style="text-align: center">🌑</td>
+</tr>
+<tr>
+<td><code>/delete_batch/check</code></td>
+<td style="text-align: center">🌑</td>
+</tr>
+<tr>
 <td><code>/download</code></td>
 <td style="text-align: center">🌔</td>
+</tr>
+<tr>
+<td><code>/download_zip</code></td>
+<td style="text-align: center">🌑</td>
 </tr>
 <tr>
 <td><code>/get_metadata</code></td>
@@ -112,8 +218,16 @@ what new moon means.</p>
 <td style="text-align: center">🌕</td>
 </tr>
 <tr>
+<td><code>/get_temporary_upload_link</code></td>
+<td style="text-align: center">🌑</td>
+</tr>
+<tr>
 <td><code>/get_thumbnail</code></td>
 <td style="text-align: center">🌕</td>
+</tr>
+<tr>
+<td><code>/get_thumbnail_batch</code></td>
+<td style="text-align: center">🌑</td>
 </tr>
 <tr>
 <td><code>/list_folder</code></td>
@@ -140,32 +254,16 @@ what new moon means.</p>
 <td style="text-align: center">🌕</td>
 </tr>
 <tr>
+<td><code>/move_batch</code></td>
+<td style="text-align: center">🌑</td>
+</tr>
+<tr>
+<td><code>/move_batch/check</code></td>
+<td style="text-align: center">🌑</td>
+</tr>
+<tr>
 <td><code>/permanently_delete</code></td>
-<td style="text-align: center">🌑</td>
-</tr>
-<tr>
-<td><code>/properties/add</code></td>
-<td style="text-align: center">🌑</td>
-</tr>
-<tr>
-<td><code>/properties/overwrite</code></td>
-<td style="text-align: center">🌑</td>
-</tr>
-<tr>
-<td><code>/properties/remove</code></td>
-<td style="text-align: center">🌑</td>
-</tr>
-<tr>
-<td><code>/properties/template/get</code></td>
-<td style="text-align: center">🌑</td>
-</tr>
-<tr>
-<td><code>/properties/template/list</code></td>
-<td style="text-align: center">🌑</td>
-</tr>
-<tr>
-<td><code>/properties/update</code></td>
-<td style="text-align: center">🌑</td>
+<td style="text-align: center">🌕</td>
 </tr>
 <tr>
 <td><code>/restore</code></td>
@@ -189,7 +287,7 @@ what new moon means.</p>
 </tr>
 <tr>
 <td><code>/upload_session/append</code></td>
-<td style="text-align: center">🌑</td>
+<td style="text-align: center">alias?</td>
 </tr>
 <tr>
 <td><code>/upload_session/append_v2</code></td>
@@ -213,7 +311,81 @@ what new moon means.</p>
 </tr>
 </tbody></table>
 
-<h2>Sharing namespace</h2>
+<h2>Paper</h2>
+
+<table><thead>
+<tr>
+<th>API call</th>
+<th style="text-align: center">Status</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>/docs/archive</code></td>
+<td style="text-align: center">🌑</td>
+</tr>
+<tr>
+<td><code>/docs/create</code></td>
+<td style="text-align: center">🌑</td>
+</tr>
+<tr>
+<td><code>/docs/download</code></td>
+<td style="text-align: center">🌑</td>
+</tr>
+<tr>
+<td><code>/docs/folder_users/list</code></td>
+<td style="text-align: center">🌑</td>
+</tr>
+<tr>
+<td><code>/docs/folder_users/list/continue</code></td>
+<td style="text-align: center">🌑</td>
+</tr>
+<tr>
+<td><code>/docs/get_folder_info</code></td>
+<td style="text-align: center">🌑</td>
+</tr>
+<tr>
+<td><code>/docs/list</code></td>
+<td style="text-align: center">🌑</td>
+</tr>
+<tr>
+<td><code>/docs/list/continue</code></td>
+<td style="text-align: center">🌑</td>
+</tr>
+<tr>
+<td><code>/docs/permanently_delete</code></td>
+<td style="text-align: center">🌑</td>
+</tr>
+<tr>
+<td><code>/docs/sharing_policy/get</code></td>
+<td style="text-align: center">🌑</td>
+</tr>
+<tr>
+<td><code>/docs/sharing_policy/set</code></td>
+<td style="text-align: center">🌑</td>
+</tr>
+<tr>
+<td><code>/docs/update</code></td>
+<td style="text-align: center">🌑</td>
+</tr>
+<tr>
+<td><code>/docs/users/add</code></td>
+<td style="text-align: center">🌑</td>
+</tr>
+<tr>
+<td><code>/docs/users/list</code></td>
+<td style="text-align: center">🌑</td>
+</tr>
+<tr>
+<td><code>/docs/users/list/continue</code></td>
+<td style="text-align: center">🌑</td>
+</tr>
+<tr>
+<td><code>/docs/users/remove</code></td>
+<td style="text-align: center">🌑</td>
+</tr>
+</tbody></table>
+
+<h2>Sharing</h2>
 
 <table><thead>
 <tr>
@@ -230,10 +402,6 @@ what new moon means.</p>
 <td style="text-align: center">🌕</td>
 </tr>
 <tr>
-<td><code>/change_file_member_access</code></td>
-<td style="text-align: center">🌑</td>
-</tr>
-<tr>
 <td><code>/check_job_status</code></td>
 <td style="text-align: center">🌑</td>
 </tr>
@@ -243,10 +411,6 @@ what new moon means.</p>
 </tr>
 <tr>
 <td><code>/check_share_job_status</code></td>
-<td style="text-align: center">🌑</td>
-</tr>
-<tr>
-<td><code>/create_shared_link</code></td>
 <td style="text-align: center">🌑</td>
 </tr>
 <tr>
@@ -274,12 +438,8 @@ what new moon means.</p>
 <td style="text-align: center">🌑</td>
 </tr>
 <tr>
-<td><code>/get_shared_links</code></td>
-<td style="text-align: center">🌑</td>
-</tr>
-<tr>
 <td><code>/list_file_members</code></td>
-<td style="text-align: center">🌑</td>
+<td style="text-align: center">🌕</td>
 </tr>
 <tr>
 <td><code>/list_file_members/batch</code></td>
@@ -342,10 +502,6 @@ what new moon means.</p>
 <td style="text-align: center">🌑</td>
 </tr>
 <tr>
-<td><code>/remove_file_member</code></td>
-<td style="text-align: center">🌑</td>
-</tr>
-<tr>
 <td><code>/remove_file_member_2</code></td>
 <td style="text-align: center">🌑</td>
 </tr>
@@ -355,6 +511,10 @@ what new moon means.</p>
 </tr>
 <tr>
 <td><code>/revoke_shared_link</code></td>
+<td style="text-align: center">🌑</td>
+</tr>
+<tr>
+<td><code>/set_access_inheritance</code></td>
 <td style="text-align: center">🌑</td>
 </tr>
 <tr>
@@ -378,6 +538,10 @@ what new moon means.</p>
 <td style="text-align: center">🌑</td>
 </tr>
 <tr>
+<td><code>/update_file_member</code></td>
+<td style="text-align: center">🌑</td>
+</tr>
+<tr>
 <td><code>/update_folder_member</code></td>
 <td style="text-align: center">🌑</td>
 </tr>
@@ -387,7 +551,7 @@ what new moon means.</p>
 </tr>
 </tbody></table>
 
-<h2>Users namespace</h2>
+<h2>Users</h2>
 
 <table><thead>
 <tr>
@@ -413,32 +577,6 @@ what new moon means.</p>
 </tr>
 </tbody></table>
 
-<h2>File Requests namespace</h2>
-
-<table><thead>
-<tr>
-<th>API call</th>
-<th style="text-align: center">Status</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>/create</code></td>
-<td style="text-align: center">🌕</td>
-</tr>
-<tr>
-<td><code>/get</code></td>
-<td style="text-align: center">🌑</td>
-</tr>
-<tr>
-<td><code>/list</code></td>
-<td style="text-align: center">🌑</td>
-</tr>
-<tr>
-<td><code>/update</code></td>
-<td style="text-align: center">🌑</td>
-</tr>
-</tbody></table>
-
 <h2>Dropbox Business API</h2>
 
 <p>Unfortunately, none of the Dropbox Business endpoints have been implemented.
@@ -447,9 +585,9 @@ issue</a>.</p>
 </div></div>
 
       <div id="footer">
-  Generated on Sat Jul 14 12:36:16 2018 by
+  Generated on Sun Oct  7 17:54:52 2018 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.9 (ruby-2.3.3).
+  0.9.15 (ruby-2.3.3).
 </div>
 
     </div>
